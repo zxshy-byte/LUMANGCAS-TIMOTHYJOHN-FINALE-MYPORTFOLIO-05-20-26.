@@ -1,0 +1,221 @@
+<section class="hero" id="home">
+    <div>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work, Skills, and Projects.</p>
+        <div>
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+            <button class="btn-secondary" onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">View Projects</button>
+        </div>
+    </div>
+    <div class="hero-image-container" id="heroImageContainer" onclick="toggleZoom()">
+        <img src="images/hero-image.jpg" alt="Hero Image"
+             onerror="this.style.background='#144272';this.style.height='400px';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.textContent='600 × 400';">
+    </div>
+</section>
+
+<section class="profile-section">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:30px; flex-wrap:wrap;">
+        <img src="images/profile.jpg" alt="Timothy John Lumangcas" style="width:110px; height:110px; border-radius:50%; border:5px solid #00D4FF;">
+        <div>
+            <h2>Timothy John Lumangcas</h2>
+            <p style="font-size:1.3rem; margin:8px 0;">Programmer | Photo Editor</p>
+            <p>Creating beautiful and functional digital experiences.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="featured">
+    <div class="featured-header-left">
+        <div class="zita-round-photo">
+            <div class="zita-round-img">
+                <img src="images/cross.jpg" alt="Zita" onerror="this.style.display='none'; this.parentElement.innerHTML='📷';">
+            </div>
+            <span>TJ</span>
+        </div>
+        <div class="section-header"><h2>Featured Projects</h2></div>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+        <div class="project-card" data-search="zita">
+            <div class="card-photo-holder">
+                <img src="images/figma.png" alt="Zita project">
+            </div>
+            Figma
+        </div>
+        <div class="project-card" data-search="hall of legends">
+            <div class="card-photo-holder">
+                <img src="images/hall of legends.png" alt="hall of legends">
+            </div>
+            E-sports
+        </div>
+        <div class="project-card" data-search="database">
+            <div class="card-photo-holder">
+                <img src="images/database.png" alt="Database project">
+            </div>
+            School Database
+        </div>
+        <div class="project-card" data-search="game development">
+            <div class="card-photo-holder">
+                <img src="images/game development.png" alt="Game Development">
+            </div>
+            Unity
+        </div>
+    </div>
+</section>
+
+<section class="section" id="testimonials">
+    <div class="section-header" style="text-align: center; margin-bottom: 1rem;">
+        <h2>Client Testimonials</h2>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">⭐ Click any testimonial to reveal rating ⭐</p>
+    </div>
+    <div class="testimonials-grid" id="testimonialsGrid">
+        <div class="testimonial-card" data-testimonial="1">
+            <div class="testimonial-text">
+                "Tim did an amazing job creating a website design in figma for our T1 Team!"
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">⭐</div>
+                <div class="author-info">
+                    <h4>Kkoma</h4>
+                    <p>T1 Head Coach</p>
+                </div>
+            </div>
+            <div class="star-rating" id="rating1">
+                <div class="stars">
+                    <span data-rating="1">★</span>
+                    <span data-rating="2">★</span>
+                    <span data-rating="3">★</span>
+                    <span data-rating="4">★</span>
+                    <span data-rating="5">★</span>
+                </div>
+                <div class="rating-text">Click stars to rate this testimonial</div>
+            </div>
+        </div>
+        <div class="testimonial-card" data-testimonial="2">
+            <div class="testimonial-text">
+                "He did an amazing job creating a data structure for our school."
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">🎓</div>
+                <div class="author-info">
+                    <h4>Prof. Jobert Ramos</h4>
+                    <p>University Administrator</p>
+                </div>
+            </div>
+            <div class="star-rating" id="rating2">
+                <div class="stars">
+                    <span data-rating="1">★</span>
+                    <span data-rating="2">★</span>
+                    <span data-rating="3">★</span>
+                    <span data-rating="4">★</span>
+                    <span data-rating="5">★</span>
+                </div>
+                <div class="rating-text">Click stars to rate this testimonial</div>
+            </div>
+        </div>
+        <div class="testimonial-card" data-testimonial="3">
+            <div class="testimonial-text">
+                "Working with Timothy on our game's UI was a pleasure. He built interactive menus and core mechanics that really elevated the user experience!"
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">🎮</div>
+                <div class="author-info">
+                    <h4>Clyde Tetsu</h4>
+                    <p>Game Studio Lead</p>
+                </div>
+            </div>
+            <div class="star-rating" id="rating3">
+                <div class="stars">
+                    <span data-rating="1">★</span>
+                    <span data-rating="2">★</span>
+                    <span data-rating="3">★</span>
+                    <span data-rating="4">★</span>
+                    <span data-rating="5">★</span>
+                </div>
+                <div class="rating-text">Click stars to rate this testimonial</div>
+            </div>
+        </div>
+        <div class="testimonial-card" data-testimonial="4">
+            <div class="testimonial-text">
+                "그의 포토샵 실력은 탁월하다. 그 사람은 내 사진을 편집하는 일을 정말 훌륭하게 해냈어요!"
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">🎮</div>
+                <div class="author-info">
+                    <h4>Faker Inmida</h4>
+                    <p>Professional Player</p>
+                </div>
+            </div>
+            <div class="star-rating" id="rating4">
+                <div class="stars">
+                    <span data-rating="1">★</span>
+                    <span data-rating="2">★</span>
+                    <span data-rating="3">★</span>
+                    <span data-rating="4">★</span>
+                    <span data-rating="5">★</span>
+                </div>
+                <div class="rating-text">Click stars to rate this testimonial</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <div class="section-header"><h2>Skills</h2></div>
+    <div class="skills-grid" id="skillsGrid">
+        <div class="skill-card" data-search="game development">
+            <div class="card-photo-holder">
+                <img src="images/unity.jpg" alt="Game Development skill">
+            </div>
+            Game Development
+        </div>
+        <div class="skill-card" data-search="database">
+            <div class="card-photo-holder">
+                <img src="images/database icon.avif" alt="Database skill">
+            </div>
+            Database
+        </div>
+        <div class="skill-card" data-search="networking">
+            <div class="card-photo-holder">
+                <img src="images/cisco.jpg" alt="Networking skill">
+            </div>
+            Networking
+        </div>
+        <div class="skill-card" data-search="photoshop">
+            <div class="card-photo-holder">
+                <img src="images/photoshop.png" alt="Photoshop skill">
+            </div>
+            Photoshopping
+        </div>
+    </div>
+</section>
+
+<section class="section" id="latest">
+    <div class="section-header"><h2>Latest Updates</h2></div>
+    <div class="latest-updates-grid" id="latestGrid">
+        <div class="update-card" data-search="database">
+            <div class="update-image">
+                <img src="images/database-diagram.png" alt="Database">
+            </div>
+            <p class="update-caption">Excited to announce my latest project in database!</p>
+        </div>
+        <div class="update-card" data-search="photoshop design">
+            <div class="update-image">
+                <img src="images/jason tatum.png" alt="Design">
+            </div>
+            <p class="update-caption">Just wrote a blog post for my photoshop.</p>
+        </div>
+    </div>
+    <div id="noResults" class="no-results">❌ No results found.</div>
+</section>
+
+<section class="section" id="contact">
+    <div class="section-header" style="text-align: center;"><h2>Get in Touch</h2></div>
+    <div style="max-width:700px; margin: 0 auto; background:var(--card); padding:40px; border-radius:16px;">
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Enter your name" required style="width:100%;padding:14px;margin:10px 0;background:rgba(255,255,255,0.1);border:none;border-radius:8px;color:var(--text); transition: all 0.2s;">
+            <input type="email" placeholder="Enter your email" required style="width:100%;padding:14px;margin:10px 0;background:rgba(255,255,255,0.1);border:none;border-radius:8px;color:var(--text); transition: all 0.2s;">
+            <textarea placeholder="Your message" rows="6" required style="width:100%;padding:14px;margin:10px 0;background:rgba(255,255,255,0.1);border:none;border-radius:8px;color:var(--text); transition: all 0.2s;"></textarea>
+            <button type="submit" class="btn-primary" style="width:100%;padding:16px; margin-right:0;">Send Message</button>
+        </form>
+    </div>
+</section>

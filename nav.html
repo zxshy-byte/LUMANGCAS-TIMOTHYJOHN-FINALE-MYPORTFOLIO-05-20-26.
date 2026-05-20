@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="logo">
+        <div class="logo-round-photo">
+            <img src="images/cross.jpg" alt="Profile" onerror="this.style.display='none'; this.parentElement.innerHTML='📷';">
+        </div>
+        <span class="logo-text">My Portfolio</span>
+    </div>
+    <div class="nav-links">
+        <a href="#featured">Featured</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#skills">Skills</a>
+        <a href="#latest">Latest</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search projects, skills..." onkeyup="handleSearch()" onkeydown="handleKeyPress(event)">
+    </div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+</nav>
